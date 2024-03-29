@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Burned&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Weather App</title>
+    <link href="src/my-weather-app.css" rel="stylesheet">
+    <script src="src/my-weather-app.js"></script>
 </head>
-<body><header>
-    <input class="location-search" type="search">
-    <input class="location-search-button" type="submit"></input>
+<body>
+    <div class="weather-app-container">
+    <header><form>
+    <input class="location-search" type="search" placeholder="Enter location..." required>
+    <input class="location-search-button" type="submit" value="Search">
+    </form>
     </header>
     <main>
     <div class="location-date-time-current">
@@ -19,16 +27,18 @@
         </p>
     </div>
     <div class="location-temp-current-icon">
-        18°C 🌥️
+        <span class="temp-value">18</span><span class="temp-measurement">°C</span> <div class="weather-icon">🌥️</div>
     </div>
     <div class="location-weather-conditions-current">
         Cloudy
         <br>
-        Humidity: 50%, Wind: 5km/h
+        Humidity: <span class="humidity">50%</span>, Wind: <span class="wind-speed">2</span> km/h
     </div>
     </main>
+    <br>
     <footer>
         This app is coded by <a href="https://github.com/Ruella-De-Vil">Ruella Budhoo</a>, code hosted on <a href="https://github.com/Ruella-De-Vil/My-Weather-App">GitHub</a> and website hosted on <a href="https://weather-app-by-ruella.netlify.app/">Netlify</a>
     </footer>
+    </div>
 </body>
 </html>

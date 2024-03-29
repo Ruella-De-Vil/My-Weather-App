@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(2, 1, 19);
+}
+
+.weather-app-container {
+    background-color: #176f7eb4;
+    max-width: 600px;
+    min-width: 400px;
+    margin: 4em auto;
+    box-shadow: inset  -0.5em -0.5em 2em rgba(194, 194, 240, 0.219);
+    padding: 2.5em 3em;
+    border-radius: 1.5em;
+}
+
+form {
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+}
+
+.location-search {
+    background-color: #cceff585;
+    border: none;
+    width: 45%;
+    height: 2em;
+    padding-left: 1em;
+    font-size: 1rem;
+    border-radius: 14px;
+    font-family: "Kantumruy Pro", sans-serif;
+}
+
+.location-search-button {
+    background-color: rgba(0, 0, 0, 0.603);
+    color: rgba(255, 255, 255, 0.712);
+    border: none;
+    width: 20%;
+    height: 2em;
+    margin-left: 0.2em;
+    font-size: 1rem;
+    border-radius: 14px;
+    font-family: "Kantumruy Pro", sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #d793f1d7;
+    text-align: end;
+}
+
+p {
+    margin-top: -1em;
+    font-size: 1.25rem;
+    text-align: end;
+    color: #d693f193;
+}
+
+.location-temp-current-icon {
+    width: 45%;
+    position: relative;
+    top: -7.5em;
+    left: 0em;
+    height: fit-content;
+    color: #e9c4f8e0;
+}
+
+.temp-value {
+    font-size: 6rem;
+    font-weight: 1000;
+    position: relative;
+    z-index: 1;
+}
+
+.temp-measurement {
+    font-size: 4rem;
+    position: relative;
+    top: -0.35em;
+}
+
+.weather-icon {
+    font-size: 7rem;
+    width: fit-content;
+    position: relative;
+    bottom: 0.8em;
+    left:0.4em;
+    margin-bottom: -2.5em;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.location-weather-conditions-current  {
+    font-size: 1.25rem;
+    text-align: end;
+    color: #f0f8ff73;
+}
+
+.humidity, .wind-speed {
+    color: rgb(238, 169, 238);
+}
+
+footer {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.8rem;
+    font-family: "Kantumruy Pro", sans-serif;
+}
+
+a {
+    color: #880416b7;
+}
+
+a:hover {
+    color: #bdade2ce;
+}
+
+a:visited {
+    color: #72dcf7b7;
+}
+
