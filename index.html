@@ -8,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Weather App</title>
     <link href="src/my-weather-app.css" rel="stylesheet">
-    <script src="src/my-weather-app.js"></script>
 </head>
 <body>
     <div class="weather-app-container">
-    <header><form>
-    <input class="location-search" type="search" placeholder="Enter location..." required>
+    <header>
+        <form class="search-form" id="search-form">
+    <input class="location-search" id="location-search" type="search" placeholder="Enter location..." required>
     <input class="location-search-button" type="submit" value="Search">
     </form>
     </header>
     <main>
     <div class="location-date-time-current">
-        <h1>
+        <h1 id="location">
             Durban
         </h1>
         <p>
@@ -40,5 +40,6 @@
         This app is coded by <a href="https://github.com/Ruella-De-Vil">Ruella Budhoo</a>, code hosted on <a href="https://github.com/Ruella-De-Vil/My-Weather-App">GitHub</a> and website hosted on <a href="https://weather-app-by-ruella.netlify.app/">Netlify</a>
     </footer>
     </div>
+    <script src="src/my-weather-app.js"></script>
 </body>
 </html>
