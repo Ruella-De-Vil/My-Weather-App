@@ -4,7 +4,7 @@ body {
 
 .weather-app-container {
     background-color: #176f7eb4;
-    max-width: 600px;
+    max-width: 500px;
     min-width: 400px;
     margin: 4em auto;
     box-shadow: inset  -0.5em -0.5em 2em rgba(194, 194, 240, 0.219);
@@ -45,22 +45,30 @@ h1 {
     font-size: 3rem;
     color: #d793f1d7;
     text-align: end;
+    animation-name: color-change;
+    animation-duration: 5s;
+}
+
+@keyframes color-change {
+    0% {color: #176f7e00;
+    }
 }
 
 p {
     margin-top: -1em;
     font-size: 1.25rem;
     text-align: end;
-    color: #d693f193;
+    color: #11a0f39a;
+    animation-name: color-change;
+    animation-duration: 5s;
 }
 
 .location-temp-current-icon {
     width: 45%;
     position: relative;
-    top: -7.5em;
-    left: 0em;
+    top: -8.5em;
     height: fit-content;
-    color: #e9c4f8e0;
+    color: #3ee462ad;
 }
 
 .temp-value {
@@ -68,12 +76,16 @@ p {
     font-weight: 1000;
     position: relative;
     z-index: 1;
+    animation-name: color-change;
+    animation-duration: 5s;
 }
 
 .temp-measurement {
     font-size: 4rem;
     position: relative;
     top: -0.35em;
+    animation-name: color-change;
+    animation-duration: 5s;
 }
 
 .weather-icon {
@@ -85,6 +97,8 @@ p {
     margin-bottom: -2.5em;
     z-index: 0;
     opacity: 0.9;
+    animation-name: color-change;
+    animation-duration: 5s;
 }
 
 .location-weather-conditions-current  {
@@ -95,6 +109,8 @@ p {
 
 .humidity, .wind-speed {
     color: rgb(238, 169, 238);
+    animation-name: color-change;
+    animation-duration: 5s;
 }
 
 footer {
