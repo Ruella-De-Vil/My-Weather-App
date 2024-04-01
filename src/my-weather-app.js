@@ -16,8 +16,9 @@ function currentWeatherConditions(response) {
     timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
     let today = document.querySelector("#day");
     today.innerHTML = formatDate(date);
-    let weatherIcon = document.querySelector("#weather-icon");
-    weatherIcon.innerHTML = response.data.weather[0].icon;
+    let iconElement = document.querySelector("#weather-icon");
+    let iconCode = response.data.weather[0].icon;
+    iconElement.innerHTML = `<img class="weather-icon" src="https://openweathermap.org/img/wn/${iconCode}.png" />`;
 }
 
 function formatDate(date) {

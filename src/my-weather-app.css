@@ -3,7 +3,7 @@ body {
 }
 
 .weather-app-container {
-    background-color: #176f7eb4;
+    background-color: #176f7ebb;
     max-width: 500px;
     min-width: 400px;
     margin: 4em auto;
@@ -64,17 +64,18 @@ p {
 }
 
 .location-temp-current-icon {
+    display: flex;
     width: 45%;
     position: relative;
-    top: -8.5em;
-    height: fit-content;
-    color: #3ee462ad;
+    top: -5em;
+    color: #232830de;
 }
 
 .temp-value {
     font-size: 6rem;
     font-weight: 1000;
     position: relative;
+    top: -0.25em;
     z-index: 1;
     animation-name: color-change;
     animation-duration: 5s;
@@ -83,25 +84,23 @@ p {
 .temp-measurement {
     font-size: 4rem;
     position: relative;
-    top: -0.35em;
+    top: -0.6em;
     animation-name: color-change;
     animation-duration: 5s;
 }
-
 .weather-icon {
-    font-size: 7rem;
-    width: fit-content;
-    position: relative;
-    bottom: 0.8em;
-    left:0.4em;
-    margin-bottom: -2.5em;
+    width: 12em ;
     z-index: 0;
-    opacity: 0.9;
+    opacity: 0.8;
     animation-name: color-change;
     animation-duration: 5s;
+    position: relative;
+    left: -10em;
+    top: -2em;
 }
 
 .location-weather-conditions-current  {
+    margin-top: -10em;
     font-size: 1.25rem;
     text-align: end;
     color: #f0f8ff73;
