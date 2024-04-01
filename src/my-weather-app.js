@@ -1,13 +1,30 @@
+
 function currentWeatherConditions(response) {
     let tempElement = document.querySelector("#temp");
     let currentTemp = response.data.main.temp;
-    let locationElement = document.querySelector("#location");
-    
-    
-    locationElement.innerHTML = response.data.name;
     tempElement.innerHTML = Math.round(currentTemp)
+    let locationElement = document.querySelector("#location");
+    locationElement.innerHTML = response.data.name;
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    let currentHumidity = document.querySelector("#humidity");
+    currentHumidity.innerHTML = `${response.data.main.humidity}%`;
+    let wind = document.querySelector("#wind-speed");
+    wind.innerHTML = `${response.data.wind.speed}m/s`;
+    let date = new Date(response.data.dt * 1000);
+    let timeElement = document.querySelector("#time");
+    timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    let today = document.querySelector("#day");
+    today.innerHTML = formatDate(date);
+    let weatherIcon = document.querySelector("#weather-icon");
+    weatherIcon.innerHTML = response.data.weather[0].icon;
 }
 
+function formatDate(date) {
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let day = days[date.getDay()];
+return `${day}`;
+}
 
 function searchLocation(location) {
 let apiKey = "a9498979f933b4259d63b76dd499f095";
@@ -24,4 +41,4 @@ function locationSearch(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", locationSearch);
 
-searchLocation("Durban")
+searchLocation("Durban");

@@ -23,16 +23,18 @@
         <h1 id="location">
         </h1>
         <p>
-            Thursday, 15:49
+         <span id="day"></span> <span id="time"></span>
         </p>
     </div>
     <div class="location-temp-current-icon">
-        <span class="temp-value" id="temp"></span><span class="temp-measurement">°C</span> <div class="weather-icon">🌥️</div>
+        <span class="temp-value" id="temp">18</span><span class="temp-measurement">°C</span> <div id="weather-icon">
+            <img class="weather-icon" src="https://openweathermap.org/img/wn/10d@2x.png" />
+        </div>
     </div>
     <div class="location-weather-conditions-current">
-        Cloudy
+        <span id="description"></span>
         <br>
-        Humidity: <span class="humidity">50%</span>, Wind: <span class="wind-speed">2</span> km/h
+        Humidity: <span class="humidity" id="humidity"></span>, Wind: <span class="wind-speed" id="wind-speed">2</span>
     </div>
     </main>
     <br>
