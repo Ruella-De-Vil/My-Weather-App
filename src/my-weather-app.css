@@ -113,38 +113,37 @@ h1 {
     animation-duration: 5s;
 }
 
-.row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto auto;
-    margin: 2em 0 0 0;
+.weather-forecast {
+    margin: 1.5em;
+    display: flex;
+    justify-content: space-around;
 }
 
-.row div {
-    display: grid;
-    place-items: center;
+.forecast-1 {
+ justify-content: center;
 }
 
-
-.row p {
+.day-1 {
     text-align: center;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 2px;
-    color: #e8f1f596;
+    color: #b1e2eb77;
+    font-size: 1.1rem;
 }
 
+.day-1-icon {
+    height: 3.5em;
+    display: block;
+    margin: auto;
+}
 
-.row img {
-    width: 4em;
-    background-color: #8ec5db70;
-    border-radius: 2em;
-    border: 0.2em solid #0e1f2550;
+.max-min-temp {
+    text-align: center;
+    color: #b1e2eb77;
+    font-size: 1.1rem;
 }
 
 footer {
+    
     text-align: center;
-    margin-top: 1em;
     font-size: 0.8rem;
     font-family: "Kantumruy Pro", sans-serif;
 }

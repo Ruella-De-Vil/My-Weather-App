@@ -39,7 +39,28 @@ function locationSearch(event) {
     searchLocation(searchInput.value)
 }
 
+function displayForecast() {
+    let forecast = document.querySelector("#forecast");
+    let forecastHtml = " ";
+
+    let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
+
+    days.forEach(function(day) {
+    forecastHtml = 
+    forecastHtml +
+    `<div class="forecast-1">
+    <div class="day-1">${day}</div>
+    <img class="day-1-icon" src= "https://openweathermap.org/img/wn/50d@2x.png" />
+    <div class="max-min-temp">
+        <span class="max-temp"><strong>19 c</strong></span><span class="min-temp"> 25 c</span>
+    </div></div>`;
+    });
+
+    forecast.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", locationSearch);
 
 searchLocation("Durban");
+displayForecast();
