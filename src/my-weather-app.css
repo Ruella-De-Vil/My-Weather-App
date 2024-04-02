@@ -4,7 +4,7 @@ body {
 
 .weather-app-container {
     background-color: #176f7ebb;
-    max-width: 500px;
+    max-width: 550px;
     min-width: 400px;
     margin: 4em auto;
     box-shadow: inset  -0.5em -0.5em 2em rgba(194, 194, 240, 0.219);
@@ -42,7 +42,7 @@ form {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #d793f1d7;
     text-align: end;
     animation-name: color-change;
@@ -54,11 +54,11 @@ h1 {
     }
 }
 
-p {
+.current-day {
     margin-top: -1em;
     font-size: 1.25rem;
     text-align: end;
-    color: #11a0f39a;
+    color: #eaf1f5c4;
     animation-name: color-change;
     animation-duration: 5s;
 }
@@ -67,8 +67,9 @@ p {
     display: flex;
     width: 45%;
     position: relative;
-    top: -5em;
-    color: #232830de;
+    top: -4em;
+    left: 1.25em;
+    color: #c6d5ecde;
 }
 
 .temp-value {
@@ -89,18 +90,18 @@ p {
     animation-duration: 5s;
 }
 .weather-icon {
-    width: 12em ;
+    width: 7.5em ;
     z-index: 0;
     opacity: 0.8;
     animation-name: color-change;
     animation-duration: 5s;
     position: relative;
-    left: -10em;
-    top: -2em;
+    right: 5.5em;
+    top: 1em;
 }
 
 .location-weather-conditions-current  {
-    margin-top: -10em;
+    margin-top: -6em;
     font-size: 1.25rem;
     text-align: end;
     color: #f0f8ff73;
@@ -110,6 +111,35 @@ p {
     color: rgb(238, 169, 238);
     animation-name: color-change;
     animation-duration: 5s;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    margin: 2em 0 0 0;
+}
+
+.row div {
+    display: grid;
+    place-items: center;
+}
+
+
+.row p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 2px;
+    color: #e8f1f596;
+}
+
+
+.row img {
+    width: 4em;
+    background-color: #8ec5db70;
+    border-radius: 2em;
+    border: 0.2em solid #0e1f2550;
 }
 
 footer {
