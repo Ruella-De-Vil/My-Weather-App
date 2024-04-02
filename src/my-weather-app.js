@@ -19,6 +19,8 @@ function currentWeatherConditions(response) {
     let iconElement = document.querySelector("#weather-icon");
     let iconCode = response.data.weather[0].icon;
     iconElement.innerHTML = `<img class="weather-icon" src="https://openweathermap.org/img/wn/${iconCode}.png" />`;
+
+    getForecast(response.data.name);
 }
 
 function formatDate(date) {
@@ -36,10 +38,19 @@ axios.get(apiUrl).then(currentWeatherConditions);
 function locationSearch(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#location-search");
+
     searchLocation(searchInput.value)
 }
 
-function displayForecast() {
+function getForecast(location) {
+    let apiKey = "a9498979f933b4259d63b76dd499f095";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+}
+
+
+function displayForecast(response) {
+    console.log(response.data);
     let forecast = document.querySelector("#forecast");
     let forecastHtml = " ";
 
@@ -63,4 +74,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", locationSearch);
 
 searchLocation("Durban");
-displayForecast();
