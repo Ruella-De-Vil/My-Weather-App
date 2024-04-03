@@ -1,13 +1,13 @@
 body {
-    background-color: rgb(2, 1, 19);
+    background-color: #020113;
 }
 
 .weather-app-container {
-    background-color: #176f7ebb;
+    background-color: #39b3a283;
     max-width: 550px;
     min-width: 400px;
     margin: 4em auto;
-    box-shadow: inset  -0.5em -0.5em 2em rgba(194, 194, 240, 0.219);
+    box-shadow: inset  -0.5em -0.5em 5em #9d13af38;
     padding: 2.5em 3em;
     border-radius: 1.5em;
 }
@@ -90,13 +90,13 @@ h1 {
     animation-duration: 5s;
 }
 .weather-icon {
-    width: 7.5em ;
+    width: 5.5em ;
     z-index: 0;
     opacity: 0.8;
     animation-name: color-change;
     animation-duration: 5s;
     position: relative;
-    right: 5.5em;
+    right: 4.5em;
     top: 1em;
 }
 

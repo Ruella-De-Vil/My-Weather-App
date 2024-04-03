@@ -42,6 +42,13 @@ function locationSearch(event) {
     searchLocation(searchInput.value)
 }
 
+function formatDay(timestamp) {
+let date = new Date(timestamp*1000);
+let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+return days[date.getDay()];
+}
+
 function getForecast(location) {
     let apiKey = "a9498979f933b4259d63b76dd499f095";
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=metric`;
@@ -50,22 +57,21 @@ function getForecast(location) {
 
 
 function displayForecast(response) {
-    console.log(response.data);
+    
     let forecast = document.querySelector("#forecast");
     let forecastHtml = " ";
 
-    let days = ["Wed", "Thur", "Fri", "Sat", "Sun"];
-
-    days.forEach(function(day) {
+    response.data.list.forEach(function(day, index) {
+        if (index < 5) {
     forecastHtml = 
     forecastHtml +
     `<div class="forecast-1">
-    <div class="day-1">${day}</div>
-    <img class="day-1-icon" src= "https://openweathermap.org/img/wn/50d@2x.png" />
+    <div class="day-1">${formatDay(day.dt)}</div>
+    <img class="day-1-icon" src= "https://openweathermap.org/img/wn/${day.weather[0].icon}.png" />
     <div class="max-min-temp">
-        <span class="max-temp"><strong>19 c</strong></span><span class="min-temp"> 25 c</span>
+        <span class="max-temp"><strong>${Math.round(day.main.temp_max)}° </strong></span><span class="min-temp">${Math.round(day.main.temp_min)}°</span>
     </div></div>`;
-    });
+    }});
 
     forecast.innerHTML = forecastHtml;
 }
