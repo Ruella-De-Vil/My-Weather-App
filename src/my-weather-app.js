@@ -14,12 +14,16 @@ function currentWeatherConditions(response) {
     let date = new Date(response.data.dt * 1000);
     let timeElement = document.querySelector("#time");
     timeElement.innerHTML = `${date.getHours()}:${date.getMinutes()}`;
+    let minutes = date.getMinutes;
     let today = document.querySelector("#day");
     today.innerHTML = formatDate(date);
     let iconElement = document.querySelector("#weather-icon");
     let iconCode = response.data.weather[0].icon;
     iconElement.innerHTML = `<img class="weather-icon" src="https://openweathermap.org/img/wn/${iconCode}.png" />`;
 
+    if (minutes < 10) {
+        minutes = `0${minutes}` ;
+    }
     getForecast(response.data.name);
 }
 
@@ -44,7 +48,7 @@ function locationSearch(event) {
 
 function formatDay(timestamp) {
 let date = new Date(timestamp*1000);
-let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 return days[date.getDay()];
 }
@@ -62,7 +66,7 @@ function displayForecast(response) {
     let forecastHtml = " ";
 
     response.data.list.forEach(function(day, index) {
-        if (index < 5) {
+        if (index === 8 || index === 16 || index === 24 || index === 32 || index === 40) {
     forecastHtml = 
     forecastHtml +
     `<div class="forecast-1">
@@ -74,6 +78,7 @@ function displayForecast(response) {
     }});
 
     forecast.innerHTML = forecastHtml;
+    console.log(response.data.list);
 }
 
 let searchFormElement = document.querySelector("#search-form");
