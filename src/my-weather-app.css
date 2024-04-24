@@ -114,7 +114,7 @@ h1 {
 }
 
 .weather-forecast {
-    margin: 1.5em;
+    margin: 1.5em 0 0 0;
     display: flex;
     justify-content: space-around;
 }

@@ -66,7 +66,7 @@ function displayForecast(response) {
     let forecastHtml = " ";
 
     response.data.list.forEach(function(day, index) {
-        if (index === 8 || index === 16 || index === 24 || index === 32 || index === 40) {
+        if (index === 8 || index === 16 || index === 24 || index === 32 || index === 39) {
     forecastHtml = 
     forecastHtml +
     `<div class="forecast-1">
