@@ -1,15 +1,15 @@
 body {
-    background-color: #020113;
+    background-color: #7899a3d0;
+    padding: 0;
 }
 
 .weather-app-container {
-    background-color: #39b3a283;
-    max-width: 550px;
-    min-width: 400px;
+    background-color: #0e2724;
+    width: 40em;
     margin: 4em auto;
-    box-shadow: inset  -0.5em -0.5em 5em #9d13af38;
     padding: 2.5em 3em;
-    border-radius: 1.5em;
+    border-radius: 0.2em;
+    border: 0.1em solid #92bde6;
 }
 
 form {
@@ -19,7 +19,7 @@ form {
 }
 
 .location-search {
-    background-color: #cceff585;
+    background-color: #68acb8a6;
     border: none;
     width: 45%;
     height: 2em;
@@ -43,10 +43,11 @@ form {
 
 h1 {
     font-size: 3.5rem;
-    color: #d793f1d7;
+    color: #e3f193d7;
     text-align: end;
     animation-name: color-change;
     animation-duration: 5s;
+    padding-right: 0.5em;
 }
 
 @keyframes color-change {
@@ -57,6 +58,7 @@ h1 {
 .current-day {
     margin-top: -1em;
     font-size: 1.25rem;
+    padding-right: 2em;
     text-align: end;
     color: #eaf1f5c4;
     animation-name: color-change;
@@ -105,16 +107,18 @@ h1 {
     font-size: 1.25rem;
     text-align: end;
     color: #f0f8ff73;
+    padding-right: 2em;
+
 }
 
 .humidity, .wind-speed {
-    color: rgb(238, 169, 238);
+    color: rgba(194, 181, 62, 0.979);
     animation-name: color-change;
     animation-duration: 5s;
 }
 
 .weather-forecast {
-    margin: 1.5em 0 0 0;
+    margin: 1.5em 0 0.5em 0;
     display: flex;
     justify-content: space-around;
 }
@@ -142,21 +146,73 @@ h1 {
 }
 
 footer {
-    
+    color: #a0deee7e;
     text-align: center;
     font-size: 0.8rem;
     font-family: "Kantumruy Pro", sans-serif;
 }
 
 a {
-    color: #880416b7;
+    color: #72ddf7a1;
 }
 
 a:hover {
-    color: #bdade2ce;
+    color: #bfe972d7;
 }
 
 a:visited {
-    color: #72dcf7b7;
+    color: #37af47e5;
+}
+
+@media only screen and (max-width: 425px) {
+    .weather-app-container {
+        width: 20em;
+    }
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+        padding: 0.25em 0;
+        margin: auto;
+    }
+
+    .current-day {
+        margin: auto;
+        font-size: 1.25rem;
+        padding-right: 1em;
+        text-align: end;
+    }
+
+    .location-temp-current-icon {
+        top: 0em;
+        left: 1em;
+    }
+
+    .temp-value {
+        font-size: 4rem;
+    }
+    
+    .temp-measurement {
+        font-size: 2rem;
+    }
+    .weather-icon {
+        width: 5em;
+        right: 3em;
+    }
+
+    .location-weather-conditions-current  {
+        margin-top: -1.75em;
+        font-size: 1.25rem;
+        padding: 1em
+    }
+    
+    .weather-forecast {
+        padding-bottom: 1em;
+    }
+    
+    .max-min-temp {
+        font-size: 1rem;
+    }
+    
 }
 
