@@ -19,6 +19,7 @@ form {
 }
 
 .location-search {
+    color: #0e2724;
     background-color: #68acb8a6;
     border: none;
     width: 45%;
@@ -29,8 +30,12 @@ form {
     font-family: "Kantumruy Pro", sans-serif;
 }
 
+::placeholder {
+    color: #000000;
+}
+
 .location-search-button {
-    background-color: rgba(0, 0, 0, 0.603);
+    background-color: #0000009a;
     color: rgba(255, 255, 255, 0.712);
     border: none;
     width: 20%;
